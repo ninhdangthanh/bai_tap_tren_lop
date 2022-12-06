@@ -1,4 +1,17 @@
-﻿--1.	In ra danh sách các sản phẩm (MASP,TENSP) do “Trung Quoc” sản xuất.
+﻿--Ngôn ngữ thao tác dữ liệu (Data Manipulation Language):
+--cau2.2
+SELECT * FROM SANPHAM,KHACHHANG
+--cau2.3
+UPDATE SANPHAM SET GIA=GIA+GIA/(100/5) WHERE NUOCSX='Thai Lan'
+--cau2.4
+UPDATE SANPHAM SET GIA =GIA/(100/5)+GIA WHERE NUOCSX='TRUNG QUOC' AND GIA >10000
+--cau2.5
+UPDATE KHACHHANG SET LOAIKH ='Vip' WHERE (NGDK<'2011/1/1' AND DOANHSO>=10000000) OR (NGDK>'2011/1/1' AND DOANHSO >=2000000)
+
+
+
+--Ngôn ngữ truy vấn dữ liệu có cấu trúc:
+--1.	In ra danh sách các sản phẩm (MASP,TENSP) do “Trung Quoc” sản xuất.
 SELECT MASP, TENSP
 FROM SANPHAM
 WHERE NUOCSX = 'TRUNG QUOC'
